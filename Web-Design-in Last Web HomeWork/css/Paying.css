@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    /* background: #7ed6df; */
+    background: linear-gradient(200deg, #D9A067, #3989DE);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter {
+    background: linear-gradient(125deg, #3989DE, #D9A067);
+    width: 500px;
+    padding: 60px;
+    text-align: center;
+    box-shadow: 0 0 20px #00000060;
+}
+
+.newsletter h1 {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 48px;
+    line-height: 40px;
+}
+
+.newsletter h1 span {
+    display: block;
+    font-size: 38px;
+}
+
+.newsletter p {
+    color: #fff;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.txtb {
+    width: 100%;
+    height: 70px;
+    background: #f1f1f199;
+    border-radius: 40px;
+    position: relative;
+    margin-top: 40px;
+}
+
+.txtb input {
+    width: 100%;
+    height: 70px;
+    border-radius: 40px;
+    border: 0;
+    background: none;
+    padding: 0 30px;
+    outline: none;
+    font-size: 15px;
+    padding-right: 80px;
+}
+
+.txtb button {
+    background: #574b90;
+    border: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s linear;
+}
+
+.txtb button:hover {
+    opacity: .5;
+}
+
+/* 校验失败的元素样式 */
+input:invalid {
+    border-color: #900;
+    background-color: #FDD;
+}
+
+input:focus:invalid {
+    outline: none;
+}
+
+/* 错误消息的样式 */
+.error {
+    width: 100%;
+    padding: 0;
+
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.error.active {
+    padding: 0.3em;
+}

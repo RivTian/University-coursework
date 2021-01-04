@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f00;
+    height: 200vh;
+}
+
+section {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    /* 重要 */
+    mix-blend-mode: color-dodge;
+}
+
+section img#bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section img#moon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section img#cloud1 {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    max-width: 600px;
+    z-index: 2;
+}
+
+section img#cloud2 {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    max-width: 600px;
+    z-index: 2;
+}
+
+section img#santa {
+    position: absolute;
+    bottom: 50px;
+    left: -600px;
+    z-index: 1;
+    max-width: 600px;
+    transform: scale(0.5);
+}
+
+section #tree {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 266px;
+    background: url(../images/tree.png);
+    background-position-y: 266;
+    z-index: 10;
+}
+
+section #text {
+    position: absolute;
+    bottom: -400px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 6em;
+    z-index: 9;
+}

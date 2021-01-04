@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandScape</title>
+    <link rel="stylesheet" href="css/LandScape.css" type="text/css">
+    <link rel="stylesheet" href="css/fonts.css" type="text/css">
+    <style>
+        .btn {
+            position: absolute;
+            display: block;
+            margin-top: 310px;
+            padding: 10px 30px;
+            background: #fff;
+            color: #333;
+            text-decoration: none;
+            border-radius: 24px;
+            transition: .5s;
+        }
+
+        /* 鼠标悬停放大的效果 */
+        .btn:hover {
+            border-radius: 20px;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="box">
+            <div class="imgBx">
+                <img src="images/pexels (1).jpg" alt="">
+                <h2>click Again To Close</h2>
+                <div class="content">
+                    <h3>Image Caption One</h3>
+                    <p>A long road appears right through the shadowy woods leading me to an unkonwn place.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="imgBx">
+                <img src="images/pexels (2).jpg" alt="">
+                <h2>click Again To Close</h2>
+                <div class="content">
+                    <h3>Image Caption Two</h3>
+                    <p>The waterfall sing, “I find my song, when I find my freedom.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="imgBx">
+                <img src="images/pexels (3).jpg" alt="">
+                <h2>click Again To Close</h2>
+                <div class="content">
+                    <h3>Image Caption Three</h3>
+                    <p>Gorgeous moon adorns spring night, with the earth. the sky like the face of the transparency of
+                        the sea, and quiet, broad, and mysterious. luxuriant star, like the sea sweet little fire,
+                        twinkling, a tiny light. the fields and villages, trees, in the quiet sleep, on the silver
+                        gauze. the hill, like clouds, like the sea island, as though to call the night cruise ships, and
+                        shining up a red light</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="imgBx">
+                <img src="images/pexels (4).jpg" alt="">
+                <h2>click Again To Close</h2>
+                <div class="content">
+                    <h3>Image Caption Four</h3>
+                    <p>The stars are not afraid to appear like fireflies.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="imgBx">
+                <img src="images/pexels (5).jpg" alt="">
+                <h2>click Again To Close</h2>
+                <div class="content">
+                    <h3>Image Caption Fives</h3>
+                    <p>I can see colorful flowers everywhere on the grass like jewels shining on a green table.</p>
+                </div>
+            </div>
+        </div>
+        <a href="index.html#destination" class="btn">Return HomePages</a>
+
+    </section>
+
+    <script>
+        // 增加类名 imgBx -> imgBx avctive
+        let imgBx = document.querySelectorAll('.imgBx');
+        imgBx.forEach(popup => popup.addEventListener('click', () => {
+            popup.classList.toggle('active');
+        }))
+    </script>
+</body>
+
+</html>

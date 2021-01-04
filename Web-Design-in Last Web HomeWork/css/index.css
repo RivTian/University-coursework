@@ -1,0 +1,447 @@
+/* Google fonts */
+/* latin-ext */
+@font-face {
+    font-family: 'Great Vibes';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/greatvibes/v8/RWmMoKWR9v4ksMfaWd_JN9XLiaQ6DQ.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Great Vibes';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/greatvibes/v8/RWmMoKWR9v4ksMfaWd_JN9XFiaQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* gurmukhi */
+@font-face {
+    font-family: 'Langar';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/langar/v11/kJEyBukW7AIlgjGliT9Yx9s.woff2) format('woff2');
+    unicode-range: U+0964-0965, U+0A01-0A75, U+200C-200D, U+20B9, U+25CC, U+262C, U+A830-A839;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Langar';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/langar/v11/kJEyBukW7AIlgjGlpD9Yx9s.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Langar';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/langar/v11/kJEyBukW7AIlgjGlqj9Y.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/orbitron/v16/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyGy6BoWgz.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+@font-face {
+    font-family: 'GreatVibes';
+    src: url('../fonts/GreatVibes.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins.ttf');
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../fonts/Orbitron.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #111;
+}
+
+section {
+    position: relative;
+    padding: 100px;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.header .logo {
+    /* position: fixed; */
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.header .toggle img {
+    max-width: 40px;
+    cursor: pointer;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 给首Banner加一层类绿滤镜 */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #009688);
+}
+
+/* banner底部拉黑色阴影 */
+.banner::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+    background: linear-gradient(to top, #111, transparent);
+}
+
+.banner .content {
+    position: relative;
+    max-width: 900px;
+    text-align: center;
+    z-index: 1;
+}
+
+.banner .content h2 {
+    color: #fff;
+    font-size: 5em;
+}
+
+.banner .content p {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 30px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 24px;
+    transition: .5s;
+}
+
+/* 鼠标悬停放大的效果 */
+.btn:hover {
+    border-radius: 20px;
+    transform: scale(1.1);
+}
+
+.fitBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+#sideNav {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: #064E54;
+    z-index: 2;
+    transition: .5s;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 50px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#menuBtn {
+    width: 50px;
+    height: 50px;
+    background: 009688;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#menuBtn img {
+    width: 20px;
+    margin-top: 15px;
+
+}
+
+.about {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .contentBx {
+    min-width: 50%;
+    width: 50%;
+    text-align: end;
+    padding-right: 40px;
+}
+
+.titleText {
+    font-weight: 600;
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.text {
+    color: #fff;
+    font-size: 1em;
+}
+
+.about .imgBx {
+    position: relative;
+    min-width: 50%;
+    width: 50%;
+    min-height: 500px;
+}
+
+.banner2,
+.banner3 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner2:before,
+.banner3:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+    background: linear-gradient(to top, #111, transparent);
+}
+
+.banner2:after,
+.banner3:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+    background: linear-gradient(to bottom, #111, transparent);
+}
+
+.destination {
+    text-align: center;
+}
+
+.destination .content {
+    text-align: center;
+}
+
+.destination .destinationList {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.destination .destinationList .box {
+    position: relative;
+    min-width: 350px;
+    height: 480px;
+    background: #191919;
+    margin: 10px;
+    transition: 0.5s;
+}
+
+.destination .destinationList:hover .box {
+    opacity: 0.2;
+}
+
+.destination .destinationList .box:hover {
+    opacity: 1;
+}
+
+.destination .destinationList .box .imgBx {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.destination .destinationList .box .content {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.destination .destinationList .box .content h2 {
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+.destination .destinationList .box .content h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer .sci {
+    position: relative;
+    display: flex;
+}
+
+.footer .sci li {
+    list-style: none;
+}
+
+.footer .sci li a {
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+.footer .sci li a img {
+    filter: invert(1);
+    max-width: 40px;
+}
+
+.copyrighText {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    color: #666;
+    text-align: center;
+}
+
+.copyrighText a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width:767px) {
+    section {
+        position: relative;
+        padding: 40px;
+    }
+
+    /* content */
+    .banner content h2 {
+        coLor: #fff;
+        font-size: 2.5em;
+    }
+
+    .banner content p {
+        font-size: 1em;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about .contentBx,
+    .about .imgBx {
+        min-width: 100%;
+        width: 100%;
+        text-align: center;
+        padding-right: 0px;
+    }
+
+    .about .imgBx {
+        min-width: 250px;
+    }
+
+    .btn {
+        margin-bottom: 30px;
+    }
+
+    .destination destinationList box {
+        position: relative;
+        max-width: 350px;
+        min-width: initial;
+        width: 350px;
+        height: 400px;
+    }
+
+    .destination .destinationList .box .imgBx {
+        height: 320px;
+    }
+
+    .footer .sci li a img {
+        filter: invert(1);
+        max-width: 30px
+    }
+}

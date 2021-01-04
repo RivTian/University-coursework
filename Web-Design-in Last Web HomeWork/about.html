@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fonts.css" type="text/css">
+    <title>about</title>
+    <!-- 
+    /*!
+    * Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com
+    * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+    *
+    * Font Awesome 是一个免费开源的矢量图标css文件，在学习过程中了解到这个，便在大作业中使用了该文件
+    * 如果在about页面中加载失败了，请老师打开网络再进行刷新即可正常加载了🙏🙏🙏.
+    * 以下 css 代码来自原官网开源代码
+    * 仅作学习使用
+    */
+     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome_5.15.1.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+    <div id="sideNav">
+        <nav>
+            <ul>
+                <li><a href="index.html">返回主页</a></li>
+                <li><a href="Contact.html">联系站长</a></li>
+                <li><a href="Happy_Christmas.html">Easter Eggs</a></li>
+                <li><a href="Log-in.html">登录</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- <div class="toggle" id="menuBtn"><img src="images/toggle.png" alt="" id="menu"></div> -->
+    <div id="menuBtn">
+        <img src="images/menu.png" id="menu">
+    </div>
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
+        var menu = document.getElementById("menu");
+
+        sideNav.style.right = "-250px";
+
+        menuBtn.onclick = function () {
+            if (sideNav.style.right == "-250px") {
+                sideNav.style.right = "0";
+                menu.src = "images/close.png";
+            } else {
+                sideNav.style.right = "-250px";
+                menu.src = "images/menu.png";
+            }
+        }
+    </script>
+
+    <div class="profile-card">
+        <div class="card-header">
+            <div class="pic">
+                <img src="images/pic.jpg" alt="">
+            </div>
+            <div class="name">RioTian</div>
+            <div class="desc">如果debugging是一种消灭bug的过程,那编程就一定是把bug放进去的过程。</div>
+            <div class="sm">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-github"></a>
+                <a href="#" class="fab fa-youtube"></a>
+
+            </div>
+            <a href="index.html" class="contract-btn">返回主页</a>
+        </div>
+        <div class="about-container">
+            <p style="text-align: center;">
+                Hello👋,欢迎来到这个小站<br>
+                &nbsp&nbsp&nbsp我的名字是 <strong>RioTian(彭天军)</strong>,我是一名预备程序员，也是一名神奇宝贝训练师.
+                我来自江理.<br>如果您有任何关于站点 <i>Rio Travels & Tours Co.Ltd</i>
+                的任何建议都欢迎至"站长联系"与我取得联系
+            </p>
+        </div>
+
+    </div>
+</body>
+
+</html>

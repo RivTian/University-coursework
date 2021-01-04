@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="css/Pay.css" type="text/css">
+  <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="product-card">
+    <h1>A new model of free group travel</h1>
+    <p>Travel destination</p>
+    <div class="product-pic"></div>
+    <div class="product-colors" id="Banner">
+      <span class="blue active" data-color="#7ed6df" data-pic="url(1.jpg)"></span>
+      <span class="green" data-color="#badc58" data-pic="url(2.jpg)"></span>
+      <span class="yellow" data-color="#f9ca24" data-pic="url(3.jpg)"></span>
+      <span class="rose" data-color="#ff7979" data-pic="url(4.jpg)"></span>
+    </div>
+    <div class="product-info">
+      <div class="product-price">$90</div>
+      <a href="Paying.html" class="product-button">Add to Cart</a>
+    </div>
+  </div>
+
+  <script>
+    // 实现鼠标单击按钮以更改颜色和图片
+    $(".product-colors span").click(function () {
+      $(".product-colors span").removeClass("active");
+      $(this).addClass("active");
+      $("body").css("background", $(this).attr("data-color"));
+      $(".product-price").css("color", $(this).attr("data-color"));
+      $(".product-button").css("color", $(this).attr("data-color"));
+      $(".product-pic").css("background-image", $(this).attr("data-pic"));
+    });
+  </script>
+</body>
+
+</html>

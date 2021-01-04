@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        /* latin-ext */
+        @font-face {
+            font-family: 'Great Vibes';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/greatvibes/v8/RWmMoKWR9v4ksMfaWd_JN9XLiaQ6DQ.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Great Vibes';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/greatvibes/v8/RWmMoKWR9v4ksMfaWd_JN9XFiaQ.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* gurmukhi */
+        @font-face {
+            font-family: 'Langar';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/langar/v11/kJEyBukW7AIlgjGliT9Yx9s.woff2) format('woff2');
+            unicode-range: U+0964-0965, U+0A01-0A75, U+200C-200D, U+20B9, U+25CC, U+262C, U+A830-A839;
+        }
+
+        /* latin-ext */
+        @font-face {
+            font-family: 'Langar';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/langar/v11/kJEyBukW7AIlgjGlpD9Yx9s.woff2) format('woff2');
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Langar';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/langar/v11/kJEyBukW7AIlgjGlqj9Y.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        /* latin */
+        @font-face {
+            font-family: 'Orbitron';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/orbitron/v16/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyGy6BoWgz.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        h2 {
+            font-family: 'Orbitron';
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <a href="404.html" class="logo">
+            <h2 style="font-family: 'Great Vibes', cursive;">Rio Travels & Tours Co.,Ltd</h2>
+        </a>
+        <div id="sideNav">
+            <nav>
+                <ul>
+                    <li><a href="index.html">主页</a></li>
+                    <li><a href="LandScape.html">更多风景</a></li>
+                    <li><a href="about.html">关于站长</a></li>
+                    <li><a href="Contact.html">联系站长</a></li>
+                    <li><a href="PayLoading.html">服务预约</a></li>
+                    <!-- 点击预约进入加一个页面,首先进入支付需要加载一下，然后在点击确认支付以后进入邮箱再确认 -->
+                    <li><a href="Happy_Christmas.html">Easter Eggs</a></li>
+                    <li><a href="Log-in.html">登录</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- <div class="toggle" id="menuBtn"><img src="images/toggle.png" alt="" id="menu"></div> -->
+        <div id="menuBtn">
+            <img src="images/menu.png" id="menu">
+        </div>
+        <script>
+            var menuBtn = document.getElementById("menuBtn");
+            var sideNav = document.getElementById("sideNav");
+            var menu = document.getElementById("menu");
+
+            sideNav.style.right = "-250px";
+
+            menuBtn.onclick = function () {
+                if (sideNav.style.right == "-250px") {
+                    sideNav.style.right = "0";
+                    menu.src = "images/close.png";
+                } else {
+                    sideNav.style.right = "-250px";
+                    menu.src = "images/menu.png";
+                }
+            }
+        </script>
+    </section>
+
+    <section class="banner">
+        <img src="images/about_bg.jpg" alt="" class="fitBg">
+        <div class="content">
+            <h2>Explore The World</h2>
+            <p style="font-family: 'Langar';">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum maiores
+                aliquid repellat, saepe omnis totam
+                dolore quam neque, nemo, velit soluta obcaecati eaque. Assumenda eaque dolores delectus placeat! Itaque,
+                doloribus!</p>
+            <a href="#about" class="btn">Learn more</a>
+        </div>
+    </section>
+
+    <!-- 设定上方的超链接指向about -->
+    <section class="about" id="about">
+        <div class="contentBx">
+            <h2 class="titleText">The Beauty Of The World</h2>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+                <br>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                deserunt mollit
+            </p>
+            <a href="#destination" class="btn">Popular Destination</a>
+        </div>
+        <div class="imgBx">
+            <img src="images/img1.jpg" alt="" class="fitBg">
+        </div>
+    </section>
+
+
+    <section class="banner2">
+        <img src="images/banner2.jpg" alt="" class="fitBg">
+    </section>
+
+    <section class="destination" id="destination">
+        <div class="content">
+            <h2 class="titleText">Most popular travel destinations in the world</h2>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+                <br>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                deserunt mollit
+            </p>
+        </div>
+        <div class="destinationList">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="images/destination1.jpg" alt="" class="fitBg">
+                </div>
+                <div class="content">
+                    <h2>Destination One<br><span>Country Name</span></h2>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBx">
+                    <img src="images/destination2.jpg" alt="" class="fitBg">
+                </div>
+                <div class="content">
+                    <h2>Destination Two<br><span>Country Name</span></h2>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="imgBx">
+                    <img src="images/destination3.jpg" alt="" class="fitBg">
+                </div>
+                <div class="content">
+                    <h2>Destination Three<br><span>Country Name</span></h2>
+                </div>
+            </div>
+
+        </div>
+        <a href="LandScape.html" class="btn">View More</a>
+    </section>
+
+    <section class="banner3">
+        <img src="images/banner3.jpg" alt="" class="fitBg">
+    </section>
+
+    <section class="footer" id="footer">
+        <!-- 社交链接 -->
+        <ul class="sci">
+            <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="images/instagram.png" alt=""></a></li>
+        </ul>
+        <h4 class="copyrighText">Copyright &copy2020 仅供Web网页制作大作业 by <a href="404.html">RioTian(彭天军)</a>. All rights
+            reserved.
+        </h4>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy_Christmas</title>
+    <link rel="stylesheet" href="css/fonts.css" type="text/css">
+    <link rel="stylesheet" href="css/Easter_Eggs.css" type="text/css">
+    <style>
+        section h2 a {
+            text-decoration: none;
+        }
+
+        section h2 a:link,
+        a:visited,
+        a:hover,
+        a:active {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <img src="images/bg.jpg" alt="" id="bg">
+        <img src="images/moon.png" alt="" id="moon">
+        <img src="images/cloud1.png" alt="" id="cloud1">
+        <img src="images/cloud2.png" alt="" id="cloud2">
+        <img src="images/santa.png" alt="" id="santa">
+        <div id="tree"></div>
+        <!-- 跳转回主页 -->
+        <h2 id="text"><a href="index.html">Happy Christmas</a></h2>
+    </section>
+    <!-- 执行JavaScript代码 -->
+    <!-- GreenSock 外部动作js文件 -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script> -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.to('#moon', {
+            scrollTrigger: {
+                scrub: 1
+            },
+            scale: 1.5,
+        })
+        gsap.to('#bg', {
+            scrollTrigger: {
+                scrub: 1
+            },
+            scale: 1.1,
+        })
+        gsap.to('#santa', {
+            scrollTrigger: {
+                scrub: 1
+            },
+            scale: 1.5,
+            y: -500,
+            x: 2200,
+        })
+        gsap.to('#tree', {
+            scrollTrigger: {
+                scrub: 1
+            },
+            x: -500,
+        })
+        gsap.to('#cloud1', {
+            scrollTrigger: {
+                scrub: 1
+            },
+            x: -200,
+        })
+        gsap.to('#cloud2', {
+            scrollTrigger: {
+                scrub: 1
+            },
+            x: 300,
+        })
+        gsap.to('#text', {
+            scrollTrigger: {
+                scrub: 1
+            },
+            y: -800,
+        })
+    </script>
+</body>
+
+</html>
