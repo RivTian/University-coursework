@@ -1,0 +1,15 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "terminal.integrated.rendererType": "dom",
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=248", //设置单行最长字符限制
+        "--ignore=E265,E403,E722,W292,F401,F403,F405,F523", //编号根据自己需要确定
+    ],
+    "python.formatting.provider": "yapf",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "files.insertFinalNewline": true
+}
