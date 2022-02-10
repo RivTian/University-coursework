@@ -9,4 +9,6 @@ Record design course
 > 4. Python-Design-PassWordRecord
 > 5. Summer-Aircraft_Warfare
 > 6. 2048-terminal Cpp.ver
+> 7. SSM-Template
+> 8. SSMP-Template
 
