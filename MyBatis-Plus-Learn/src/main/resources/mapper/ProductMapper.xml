@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.riotian.mplearn.mapper.ProductMapper">
+
+    <resultMap id="BaseResultMap" type="com.riotian.mplearn.entity.Product">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="name" column="NAME" jdbcType="VARCHAR"/>
+            <result property="price" column="price" jdbcType="INTEGER"/>
+            <result property="version" column="version" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,NAME,price,
+        version
+    </sql>
+  <insert id="insertSelective">
+    insert into product
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">id,</if>
+      <if test="name != null">NAME,</if>
+      <if test="price != null">price,</if>
+      <if test="version != null">version,</if>
+    </trim>
+    values
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">#{id,jdbcType=BIGINT},</if>
+      <if test="name != null">#{name,jdbcType=VARCHAR},</if>
+      <if test="price != null">#{price,jdbcType=INTEGER},</if>
+      <if test="version != null">#{version,jdbcType=INTEGER},</if>
+    </trim>
+  </insert>
+  <delete id="deleteByIdAndName">
+    delete
+    from product
+    where id = #{id,jdbcType=NUMERIC}
+      AND NAME = #{name,jdbcType=VARCHAR}
+  </delete>
+</mapper>
